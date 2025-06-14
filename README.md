@@ -1,111 +1,107 @@
-# 🚆 IRCTC Login Automation Demo
-
-> ⚠️ **This project is for educational purposes only.** It demonstrates Puppeteer automation with CAPTCHA solving using open-source tools. Do **not** use it to access or interact with real IRCTC systems, as doing so may violate their Terms of Service.
+Here is a complete **README**-style breakdown of **every single tool, library, and setup step** used in your IRCTC auto-login script, written professionally and clearly for anyone (especially beginners):
 
 ---
 
-## ✅ Prerequisites
+## 🚀 IRCTC Auto Login Script (For Educational Purposes Only)
 
-Before starting, ensure you have the following installed:
+This script uses **Puppeteer** and **Tesseract.js** to automate login on the [IRCTC](https://www.irctc.co.in/) website by:
 
-### 1. **Node.js**
-- Download and install from: https://nodejs.org/
-- Recommended version: **Node.js 18.x LTS** or higher
-- Verify installation:
+* Opening the site using a stealthy browser instance
+* Filling in username and password
+* Capturing and solving CAPTCHA using OCR (Optical Character Recognition)
+* Retrying if login fails due to incorrect CAPTCHA
+
+⚠️ **Disclaimer:** This script is intended strictly for educational purposes. Automating login on public platforms like IRCTC may violate their [Terms of Use](https://www.irctc.co.in/nget/profile/terms-and-conditions) and can result in account suspension or legal consequences. Use responsibly.
+
+---
+
+### 🧰 Tools & Libraries Used
+
+| Tool / Package                                                                                   | Purpose                                              |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
+| [`puppeteer-extra`](https://www.npmjs.com/package/puppeteer-extra)                               | Headless Chrome browser automation                   |
+| [`puppeteer-extra-plugin-stealth`](https://www.npmjs.com/package/puppeteer-extra-plugin-stealth) | Hides automation fingerprints to avoid bot detection |
+| [`tesseract.js`](https://www.npmjs.com/package/tesseract.js)                                     | JavaScript OCR engine for solving CAPTCHA            |
+| [`jimp`](https://www.npmjs.com/package/jimp)                                                     | Image processing before feeding into Tesseract       |
+| `fs`, `path` (Node.js core)                                                                      | For saving/loading images locally                    |
+
+---
+
+### ✅ Prerequisites
+
+* [Node.js](https://nodejs.org/) installed (preferably version 18+)
+* Basic command-line knowledge
+
+---
+
+### 📦 Installation
+
+Open your terminal and run:
+
 ```bash
-node -v
-npm -v
+# Create a new folder
+mkdir irctc-login && cd irctc-login
+
+# Initialize Node.js project
+npm init -y
+
+# Install all required packages
+npm install puppeteer-extra puppeteer-extra-plugin-stealth puppeteer tesseract.js jimp
 ```
 
 ---
 
-## 🚀 Installation Steps
+### 📝 Configuration
 
-### 1. **Clone or Download the Repository**
+In your script file (`irctc.js`):
 
-If using Git:
-```bash
-git clone https://github.com/your-username/irctc-login-automation-demo.git
-cd irctc-login-automation-demo
-```
+* Replace `"YourUsername"` with your actual IRCTC username.
+* Replace `"YourPassword"` with your actual password.
 
-Or simply download the ZIP and extract it.
-
----
-
-### 2. **Install Required Dependencies**
-
-Run this in the root directory of the project:
-```bash
-npm install
-```
-
-It will install the following:
-- `puppeteer-extra`
-- `puppeteer-extra-plugin-stealth`
-- `tesseract.js`
-- `jimp`
-- `fs`, `path` (built-in)
-
----
-
-### 3. **Update Your Credentials**
-
-Open the `irctc.js` file and replace these placeholders:
 ```js
-await page.type('input[formcontrolname="userid"]', "YourUsername", { delay: 150 });
-await page.type('input[formcontrolname="password"]', "YourPassword", { delay: 150 });
+await usernameInput.type("YourUsername", { delay: 200 });
+await passwordInput.type("YourPassword", { delay: 200 });
 ```
 
-> ⚠️ Use dummy credentials if publishing the code. Never commit real credentials to GitHub.
+⚠️ **Do not share your credentials in public repos.**
 
 ---
 
-### 4. **Run the Script**
+### ▶️ Running the Script
+
+In your terminal, run:
 
 ```bash
 node irctc.js
 ```
 
-> The script will:
-- Open IRCTC in a visible browser
-- Click Login
-- Enter credentials
-- Capture and solve CAPTCHA using OCR
-- Attempt login
-- Keep the browser open after login
+---
+
+### 🔒 Important Notes
+
+* The script **waits 5 seconds** before interacting to allow the site to fully load.
+* CAPTCHA solving uses **Tesseract.js** and may fail sometimes. It retries if login fails.
+* The browser **stays open** after a successful login for observation or further actions.
 
 ---
 
-## 📁 Project Structure
+### 📁 File Structure (after running)
 
+```bash
+irctc-login/
+├── irctc.js                 # The main automation script
+├── captcha.png              # Captured CAPTCHA (saved during run)
+├── captcha-processed.png    # Processed version for OCR
+├── package.json
+└── node_modules/
 ```
-irctc-login-automation-demo/
-├── irctc.js                # Main automation script
-├── captcha.png             # Captured CAPTCHA image (temporary)
-├── captcha-processed.png   # Enhanced CAPTCHA image (temporary)
-├── package.json            # Project config & dependencies
-└── README.md               # Project instructions & disclaimer
-```
 
 ---
 
-## 📌 Notes
+### ❗ Legal & Ethical Disclaimer
 
-- CAPTCHA solving uses open-source OCR (Tesseract.js) and may not be perfect.
-- Script includes retry logic for failed logins due to incorrect CAPTCHA.
-- Browser remains open after execution for manual inspection.
+> This project is a proof-of-concept built for learning browser automation and CAPTCHA handling. Do not use this script against any website without explicit permission. Use of automation tools on IRCTC or similar platforms is **against their policies** and **can result in your account being blocked or legal action**.
 
 ---
 
-## 📄 License
 
-This project is licensed under the **MIT License**.
-
-> You are free to use, modify, and distribute this software. The author is **not responsible** for any misuse.
-
----
-
-## 📬 Disclaimer
-
-> This script is provided **solely for educational and research purposes**. Do not use it to automate, scrape, or interact with live government or commercial platforms like [IRCTC](https://www.irctc.co.in) unless you have explicit permission. Misuse of automation tools may result in account bans or legal consequences.
