@@ -37,7 +37,11 @@ npm install
 
 1. Install Tesseract-OCR
 
-Windows: Download from here
+Windows:(Same Terminal where you cloned the git)
+
+Terminal:
+
+npm install tesseract.js
 
 Linux:
 
@@ -128,7 +132,7 @@ Use responsibly and at your own risk.
 
 📜 License
 
-MIT License
+MIT License Royal-Kingfisher
 
 ---
 
