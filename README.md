@@ -1,8 +1,6 @@
 
 ---
 
-✅ Cleaned & Beautiful README.md
-
 # 🚂 IRCTC Automation Bot
 
 Automate the IRCTC ticket booking process using **Node.js**, **Puppeteer**, and **OCR**.
