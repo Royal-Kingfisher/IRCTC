@@ -51,10 +51,10 @@ async function automateIRCTC() {
     visible: true,
   });
 
-  await page.type('input[formcontrolname="userid"]', "RailYatriSeva", {
+  await page.type('input[formcontrolname="userid"]', "", {
     delay: 150,
   });
-  await page.type('input[formcontrolname="password"]', "Narela123@", {
+  await page.type('input[formcontrolname="password"]', "", {
     delay: 150,
   });
 
