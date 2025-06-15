@@ -1,107 +1,149 @@
-Here is a complete **README**-style breakdown of **every single tool, library, and setup step** used in your IRCTC auto-login script, written professionally and clearly for anyone (especially beginners):
+
 
 ---
 
-## 🚀 IRCTC Auto Login Script (For Educational Purposes Only)
+🚄 IRCTC Ticket Booking Automation Bot
 
-This script uses **Puppeteer** and **Tesseract.js** to automate login on the [IRCTC](https://www.irctc.co.in/) website by:
+Automates IRCTC ticket booking using Puppeteer + Stealth Plugin to bypass bot detection, enhanced with Tesseract OCR to solve IRCTC CAPTCHAs. Fully configurable via a config.json file.
 
-* Opening the site using a stealthy browser instance
-* Filling in username and password
-* Capturing and solving CAPTCHA using OCR (Optical Character Recognition)
-* Retrying if login fails due to incorrect CAPTCHA
-
-⚠️ **Disclaimer:** This script is intended strictly for educational purposes. Automating login on public platforms like IRCTC may violate their [Terms of Use](https://www.irctc.co.in/nget/profile/terms-and-conditions) and can result in account suspension or legal consequences. Use responsibly.
 
 ---
 
-### 🧰 Tools & Libraries Used
+⚙️ Features
 
-| Tool / Package                                                                                   | Purpose                                              |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
-| [`puppeteer-extra`](https://www.npmjs.com/package/puppeteer-extra)                               | Headless Chrome browser automation                   |
-| [`puppeteer-extra-plugin-stealth`](https://www.npmjs.com/package/puppeteer-extra-plugin-stealth) | Hides automation fingerprints to avoid bot detection |
-| [`tesseract.js`](https://www.npmjs.com/package/tesseract.js)                                     | JavaScript OCR engine for solving CAPTCHA            |
-| [`jimp`](https://www.npmjs.com/package/jimp)                                                     | Image processing before feeding into Tesseract       |
-| `fs`, `path` (Node.js core)                                                                      | For saving/loading images locally                    |
+✅ Login with auto CAPTCHA solving using Tesseract.js
 
----
+✅ Select source, destination, quota, date, class, and train number
 
-### ✅ Prerequisites
+✅ Auto-fills passenger details
 
-* [Node.js](https://nodejs.org/) installed (preferably version 18+)
-* Basic command-line knowledge
+✅ UPI payment support
 
----
+✅ IRCTC bot detection evasion using puppeteer-extra-plugin-stealth
 
-### 📦 Installation
+✅ Retry logic on CAPTCHA failure
 
-Open your terminal and run:
+✅ Uses both Tesseract.js and command-line Tesseract for robustness
 
-```bash
-# Create a new folder
-mkdir irctc-login && cd irctc-login
 
-# Initialize Node.js project
-npm init -y
-
-# Install all required packages
-npm install puppeteer-extra puppeteer-extra-plugin-stealth puppeteer tesseract.js jimp
-```
 
 ---
 
-### 📝 Configuration
+📦 Requirements
 
-In your script file (`irctc.js`):
+Node.js v16+ or newer
 
-* Replace `"YourUsername"` with your actual IRCTC username.
-* Replace `"YourPassword"` with your actual password.
+Tesseract-OCR installed and added to system path
 
-```js
-await usernameInput.type("YourUsername", { delay: 200 });
-await passwordInput.type("YourPassword", { delay: 200 });
-```
+Google Chrome or Chromium
 
-⚠️ **Do not share your credentials in public repos.**
+IRCTC user account
+
+
 
 ---
 
-### ▶️ Running the Script
+🛠️ Installation
 
-In your terminal, run:
+# Clone the repo
+git clone https://github.com/YOUR_USERNAME/irctc-automation-bot.git
+cd irctc-automation-bot
 
-```bash
+# Install dependencies
+npm install
+
+
+---
+
+🔧 Setup
+
+1. Install Tesseract-OCR
+
+Windows: https://github.com/UB-Mannheim/tesseract/wiki
+
+Linux:
+
+sudo apt install tesseract-ocr
+
+macOS:
+
+brew install tesseract
+
+
+
+2. Create config.json in the root directory
+
+
+
+{
+  "userid": "YourIRCTCUserID",
+  "password": "YourIRCTCPassword",
+  "origin": "New Delhi",
+  "destination": "Mumbai Central",
+  "quota": "TATKAL",
+  "date": "20-06-2025",
+  "train_number": "12951",
+  "class": "3A",
+  "name": "xxxxx",
+  "age": "xx",
+  "gender": "M",
+  "berthPreference": "LB",
+  "foodChoice": "N",
+  "phonenumber": "xxxxxxxxxx",
+  "UPI": "yourupi@upi"
+}
+
+> Note: Update the fields based on your ticket booking preferences.
+
+
+
+
+---
+
+🚀 Run the Script
+
 node irctc.js
-```
+
+> Script will launch a Chromium browser, perform login, fill booking details, and take you to UPI payment.
+
+
+
 
 ---
 
-### 🔒 Important Notes
+🧠 How CAPTCHA Solving Works
 
-* The script **waits 5 seconds** before interacting to allow the site to fully load.
-* CAPTCHA solving uses **Tesseract.js** and may fail sometimes. It retries if login fails.
-* The browser **stays open** after a successful login for observation or further actions.
+Captures CAPTCHA image
 
----
+Preprocesses image using Jimp (grayscale, contrast, thresholding)
 
-### 📁 File Structure (after running)
+Uses Tesseract.js and CLI fallback (tesseract.js, --psm 7) to extract text
 
-```bash
-irctc-login/
-├── irctc.js                 # The main automation script
-├── captcha.png              # Captured CAPTCHA (saved during run)
-├── captcha-processed.png    # Processed version for OCR
-├── package.json
-└── node_modules/
-```
+Inputs the recognized CAPTCHA automatically
+
+
 
 ---
 
-### ❗ Legal & Ethical Disclaimer
+📁 File Structure
 
-> This project is a proof-of-concept built for learning browser automation and CAPTCHA handling. Do not use this script against any website without explicit permission. Use of automation tools on IRCTC or similar platforms is **against their policies** and **can result in your account being blocked or legal action**.
+├── irctc.js                # Main automation script
+├── config.json             # User configuration file
+├── captcha.png             # Raw CAPTCHA image (temporary)
+├── captcha-processed.png   # Processed CAPTCHA image (temporary)
+├── radio_button_error.png  # Screenshot for error debug (optional)
+└── README.md               # This file
+
 
 ---
 
+🛡️ Disclaimer
 
+This script is intended for educational purposes only. Automating IRCTC bookings may violate their terms of service. Use responsibly and at your own risk.
+
+
+---
+
+📜 License
+
+MIT © 2025 
