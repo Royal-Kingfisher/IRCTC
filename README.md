@@ -79,7 +79,7 @@ brew install tesseract
 
 🚀 Run the Script
 
-node irctc.js
+node main.js
 
 This will:
 
@@ -111,7 +111,7 @@ Automatically inputs CAPTCHA
 
 📁 File Structure
 
-├── irctc.js               # Main automation script
+├── main.js               # Main automation script
 ├── config.json            # User configuration
 ├── captcha.png            # Raw CAPTCHA image (temporary)
 ├── captcha-processed.png  # Processed CAPTCHA image (temporary)
