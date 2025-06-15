@@ -22,7 +22,7 @@ Automate the IRCTC ticket booking process using **Node.js**, **Puppeteer**, and 
 
 1. **Clone the Repository**
 ```bash
-git clone https://github.com/YOUR_USERNAME/irctc-automation-bot.git
+git clone https://github.com/YOUR_USERNAME/irctc-automation-bot-demo.git
 cd irctc-automation-bot
 
 2. Install Dependencies
