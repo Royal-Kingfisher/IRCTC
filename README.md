@@ -2,64 +2,48 @@
 
 ---
 
-🚄 IRCTC Ticket Booking Automation Bot
+🚄 IRCTC Automation Bot
 
-Automates IRCTC ticket booking using Puppeteer + Stealth Plugin to bypass bot detection, enhanced with Tesseract OCR to solve IRCTC CAPTCHAs. Fully configurable via a config.json file.
-
-
----
-
-⚙️ Features
-
-✅ Login with auto CAPTCHA solving using Tesseract.js
-
-✅ Select source, destination, quota, date, class, and train number
-
-✅ Auto-fills passenger details
-
-✅ UPI payment support
-
-✅ IRCTC bot detection evasion using puppeteer-extra-plugin-stealth
-
-✅ Retry logic on CAPTCHA failure
-
-✅ Uses both Tesseract.js and command-line Tesseract for robustness
-
+Automate the IRCTC ticket booking process using Node.js, Puppeteer, and OCR.
 
 
 ---
 
-📦 Requirements
-
-Node.js v16+ or newer
-
-Tesseract-OCR installed and added to system path
+✅ Requirements
 
 Google Chrome or Chromium
 
-IRCTC user account
+IRCTC User Account
+
+Node.js and npm
+
+Tesseract OCR
 
 
 
 ---
 
-🛠️ Installation
+🔧 Installation
 
-# Clone the repo
+1. Clone the Repository
+
 git clone https://github.com/YOUR_USERNAME/irctc-automation-bot.git
 cd irctc-automation-bot
 
-# Install dependencies
+2. Install Dependencies
+
 npm install
 
 
 ---
 
-🔧 Setup
+⚙️ Setup
 
 1. Install Tesseract-OCR
 
-Windows: https://github.com/UB-Mannheim/tesseract/wiki
+Windows:
+
+Download from: https://github.com/UB-Mannheim/tesseract/wiki
 
 Linux:
 
@@ -69,11 +53,7 @@ macOS:
 
 brew install tesseract
 
-
-
 2. Create config.json in the root directory
-
-
 
 {
   "userid": "YourIRCTCUserID",
@@ -93,7 +73,7 @@ brew install tesseract
   "UPI": "yourupi@upi"
 }
 
-> Note: Update the fields based on your ticket booking preferences.
+> 📝 Note: Update the fields based on your ticket preferences.
 
 
 
@@ -104,22 +84,29 @@ brew install tesseract
 
 node irctc.js
 
-> Script will launch a Chromium browser, perform login, fill booking details, and take you to UPI payment.
+The script will:
 
+Launch a Chromium browser
+
+Login
+
+Fill booking details
+
+Proceed to UPI payment
 
 
 
 ---
 
-🧠 How CAPTCHA Solving Works
+🤖 How CAPTCHA Solving Works
 
 Captures CAPTCHA image
 
-Preprocesses image using Jimp (grayscale, contrast, thresholding)
+Uses Jimp to preprocess (grayscale, contrast, threshold)
 
-Uses Tesseract.js and CLI fallback (tesseract.js, --psm 7) to extract text
+Uses Tesseract.js & CLI fallback (--psm 7) to extract text
 
-Inputs the recognized CAPTCHA automatically
+Automatically inputs CAPTCHA
 
 
 
@@ -127,23 +114,28 @@ Inputs the recognized CAPTCHA automatically
 
 📁 File Structure
 
-├── irctc.js                # Main automation script
-├── config.json             # User configuration file
-├── captcha.png             # Raw CAPTCHA image (temporary)
-├── captcha-processed.png   # Processed CAPTCHA image (temporary)
-├── radio_button_error.png  # Screenshot for error debug (optional)
-└── README.md               # This file
+├── irctc.js                  # Main automation script
+├── config.json               # User configuration
+├── captcha.png               # Raw CAPTCHA image (temporary)
+├── captcha-processed.png     # Processed CAPTCHA image (temporary)
+├── radio_button_error.png    # Screenshot for error debug (optional)
+└── README.md                 # This file
 
 
 ---
 
-🛡️ Disclaimer
+⚠️ Disclaimer
 
-This script is intended for educational purposes only. Automating IRCTC bookings may violate their terms of service. Use responsibly and at your own risk.
+This script is for educational purposes only. Automating IRCTC bookings may violate their terms of service. Use at your own risk.
 
 
 ---
 
-📜 License
+📄 License
 
-MIT © 2025 
+MIT License
+
+
+---
+
+
