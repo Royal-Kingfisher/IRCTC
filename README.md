@@ -160,3 +160,7 @@ node main.js
 ## ✨ Credits
 
 Made with ❤️ by Royal-Kingfisher – customized for beginners to auto-book IRCTC tickets like a pro 🚀
+
+Inspired by concepts from [@Zaidkhalid44](https://github.com/Zaidkhalid44).
+
+
