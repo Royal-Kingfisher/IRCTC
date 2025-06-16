@@ -1,2 +1,21 @@
 
-Edit this And add your details.
+{
+  "username": "your_username",
+  "password": "your_password",
+  "origin": "NEW DELHI - NDLS (NEW DELHI)",
+  "destination": "SHIVAJI BRIDGE - CSB",
+  "date": "01/07/2025",
+  "train_number": "14212",
+  "class": "2S",
+  "quota": "TATKAL",
+  "name": "PASSENGER_NAME",
+  "age": "26",
+  "gender": "M",
+  "berthPreference": "NA",
+  "foodChoice": "",
+  "phonenumber": "9999999999",
+  "UPI": "example@upi",
+  "upi": false,
+  "timedBooking": true,
+  "bookingTime": "15:39:01"
+}
