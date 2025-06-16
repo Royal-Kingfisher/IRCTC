@@ -75,7 +75,7 @@ npm install puppeteer-extra puppeteer-extra-plugin-stealth jimp
 
 #### `config.json`
 
-➡️ Paste and update with your details:
+➡️ Paste and update with your details: check `config.txt` to see how to edit `config.json`
 
 ```json
 {
