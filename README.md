@@ -158,4 +158,4 @@ node main.js
 
 ## ✨ Credits
 
-Made with ❤️ by ChatGPT – customized for beginners to auto-book IRCTC tickets like a pro 🚀
+Made with ❤️ by Royal-Kingfisher – customized for beginners to auto-book IRCTC tickets like a pro 🚀
