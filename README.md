@@ -93,7 +93,7 @@ npm install puppeteer-extra puppeteer-extra-plugin-stealth jimp
   "gender": "M",
   "berthPreference": "NA",
   "foodChoice": "",
-  "phonenumber": "9999999999",
+  "phonenumber": "xxxxxxxxxx",
   "UPI": "yourupi@upi",
   "upi": false,
   "timedBooking": true,
