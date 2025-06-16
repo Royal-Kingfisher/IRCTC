@@ -157,6 +157,17 @@ node main.js
 
 ---
 
+## ⚠️ Disclaimer
+
+> This project is intended for educational purposes only.  
+> Use of this bot to access or automate IRCTC services is done entirely at your own risk.
+
+- I do **not endorse or support misuse** of this script on production IRCTC systems.
+- The author is **not responsible** for any account suspension, data loss, or legal issues that may arise from using this tool.
+- By using this code, **you agree to take full responsibility** for how it is used.
+
+---
+
 ## ✨ Credits
 
 Made with ❤️ by Royal-Kingfisher – customized for beginners to auto-book IRCTC tickets like a pro 🚀
