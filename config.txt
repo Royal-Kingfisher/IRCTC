@@ -1,0 +1,71 @@
+{
+  // ✅ Your IRCTC login username (case-sensitive)
+  "username": "your_username",
+
+  // ✅ Your IRCTC password (case-sensitive)
+  "password": "your_password",
+
+  // ✅ Your departure station (must match IRCTC format)
+  "origin": "NEW DELHI - NDLS (NEW DELHI)",
+
+  // ✅ Your destination station (must match IRCTC format)
+  "destination": "SHIVAJI BRIDGE - CSB",
+
+  // ✅ Date of journey in DD/MM/YYYY format (e.g. "17/06/2025")
+  "date": "17/06/2025",
+
+  // ✅ Train number only (no train name)
+  "train_number": "14212",
+
+  // ✅ Class of travel (e.g. "2S", "SL", "3A", "2A", "1A", etc.)
+  "class": "2S",
+
+  // ✅ Booking quota (e.g. "GN" for General, "TATKAL" for Tatkal)
+  "quota": "TATKAL",
+
+  // ✅ Passenger full name (as per ID)
+  "name": "human",
+
+  // ✅ Age of passenger (as a number string, e.g. "26")
+  "age": "26",
+
+  // ✅ Gender:
+  // "M" = Male
+  // "F" = Female
+  // "T" = Transgender
+  "gender": "M",
+
+  // ✅ Berth preference:
+  // "LB" = Lower
+  // "MB" = Middle
+  // "UB" = Upper
+  // "SL" = Side Lower
+  // "SU" = Side Upper
+  // "NA" = No Preference
+  "berthPreference": "NA",
+
+  // ✅ Food preference (only if train offers catering):
+  // "V" = Vegetarian
+  // "N" = Non-Vegetarian
+  // ""  = Leave blank if no food required or not applicable
+  "foodChoice": "",
+
+  // ✅ Your 10-digit mobile number (required)
+  "phonenumber": "xxxxxxxxxx",
+
+  // ✅ Your UPI ID (used only if "upi" is true)
+  "UPI": "yourupi@bank",
+
+  // ✅ Payment method:
+  // true  = Use IRCTC eWallet
+  // false = Use UPI
+  "upi": false,
+
+  // ✅ Timed booking feature:
+  // true  = Script will wait until "bookingTime" before proceeding after login
+  // false = Proceeds immediately after login
+  "timedBooking": true,
+
+  // ✅ Time to begin booking if timedBooking is true (in "HH:MM:SS", 24-hour format)
+  "bookingTime": "15:39:01"
+}
