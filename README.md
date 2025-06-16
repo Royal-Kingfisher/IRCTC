@@ -57,7 +57,7 @@ npm install puppeteer-extra puppeteer-extra-plugin-stealth jimp
 
 ### 3. ✅ Install Node.js (If Not Installed)
 
-* Download from [[https://nodejs.org](https://nodejs.org)](https://nodejs.org/dist/v22.16.0/node-v22.16.0-x64.msi)]
+* Download from: [https://nodejs.org/dist/v22.16.0/node-v22.16.0-x64.msi]
 * Choose LTS Version
 * Install normally (Next, Next...)
 
