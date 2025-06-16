@@ -63,7 +63,8 @@ npm install puppeteer-extra puppeteer-extra-plugin-stealth jimp
 
 ### 4. ✅ Install Tesseract OCR (Required for CAPTCHA)
 
-* 🔗 Download: [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki)
+* 🔗 Download: https://github.com/tesseract-ocr/tesseract/releases/download/5.5.0/tesseract-ocr-w64-setup-5.5.0.20241111.exe
+  
 * Install it
 * Add to **System PATH** (important for `tesseract` command to work)
 
